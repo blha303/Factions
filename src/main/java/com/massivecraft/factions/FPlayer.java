@@ -206,6 +206,16 @@ public class FPlayer extends PlayerEntity implements EconomyParticipator {
     public String getAccountId() {
         return this.getId();
     }
+    
+    private String sortBy;
+    
+    public String getSortBy() {
+    	return this.sortBy;
+    }
+    
+    public void setSortBy(String sortBy) {
+    	this.sortBy = sortBy;
+    }
 
     // -------------------------------------------- //
     // Construct
@@ -224,6 +234,7 @@ public class FPlayer extends PlayerEntity implements EconomyParticipator {
         this.loginPvpDisabled = Conf.noPVPDamageToOthersForXSecondsAfterLogin > 0;
         this.deleteMe = false;
         this.powerBoost = 0.0;
+        this.sortBy = "unset";
 
         if (!Conf.newPlayerStartingFactionID.equals("0") && Factions.i.exists(Conf.newPlayerStartingFactionID)) {
             this.factionId = Conf.newPlayerStartingFactionID;

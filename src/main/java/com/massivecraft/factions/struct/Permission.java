@@ -63,6 +63,7 @@ public enum Permission {
     STATUS("status"),
     TAG("tag"),
     TITLE("title"),
+    TOP("top"),
     UNCLAIM("unclaim"),
     UNCLAIM_ALL("unclaimall"),
     VERSION("version"),
